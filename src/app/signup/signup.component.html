@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <form class="example-form"  [formGroup]="myForm1"  (ngSubmit)="myForm1.valid && onSubmit(myForm1)" novalidate>
+                
+                <mat-form-field class="example-full-width form-group">
+                  <mat-label>Name</mat-label>
+                  <input matInput  placeholder="Name"  formControlName="firstname" [ngClass]="{
+                    'is-invalid':
+                      name.errors && (name.touched || name.dirty),
+                    'is-valid': name.valid
+                  }" required >
+                </mat-form-field>
+            
+                <mat-form-field class="example-full-width form-group">
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput placeholder="email@email.com" formControlName="email" [ngClass]="{
+                    'is-invalid':
+                      email.errors && (email.touched || email.dirty),
+                    'is-valid': email.valid
+                  }" required>
+                 
+                </mat-form-field>
+              </form>
+        </div>
+    </div>
+</div>
+
+  
