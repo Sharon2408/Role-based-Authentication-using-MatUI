@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // Material UI
 import {MatIconModule} from '@angular/material/icon';
@@ -15,12 +16,21 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { SignupComponent } from './signup/signup.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { LoginComponent } from './login/login.component';
+
+// Primeng
+import { ToastModule } from 'primeng/toast'
+import { MessageService } from 'primeng/api';
+import { AssignTasksComponent } from './assign-tasks/assign-tasks.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent,
+    AssignTasksComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +42,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    ToastModule,
+  
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

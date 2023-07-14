@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">EMAIL</th>
+                        <th scope="col" class="text-center">TASKS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let x of user_data">
+                    <tr>
+                        
+                        <th scope="row">{{x.id}}</th>
+                        <td>{{x.firstname}}</td>
+                        <td>{{x.email}}</td>
+                        <td class="text-center" >
+                            <a  mat-raised-button color="primary">ASSIGN</a>
+                            <a class="ms-4" mat-raised-button color="accent" >UPDATE</a>
+                            <a class="ms-4" mat-raised-button color="warn">DELETE</a>
+                        </td>
+                    
+                    </tr>
+                </ng-container>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

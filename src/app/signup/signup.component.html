@@ -1,29 +1,60 @@
+<p-toast position="top-center" key="tc" ></p-toast>
 <div class="container mt-5">
-    <div class="row">
-        <div class="col">
-            <form class="example-form"  [formGroup]="myForm1"  (ngSubmit)="myForm1.valid && onSubmit(myForm1)" novalidate>
-                
-                <mat-form-field class="example-full-width form-group">
-                  <mat-label>Name</mat-label>
-                  <input matInput  placeholder="Name"  formControlName="firstname" [ngClass]="{
+  <div class="row justify-content-center">
+    <div class="col">
+      <form class="example-form container" [formGroup]="myForm1" (ngSubmit)="myForm1.valid && onSubmit()"
+        novalidate>
+
+        <mat-form-field class="example-full-width form-group">
+          <mat-label>Name</mat-label>
+          <input class="" matInput placeholder="Name" formControlName="firstname" [ngClass]="{
                     'is-invalid':
                       name.errors && (name.touched || name.dirty),
                     'is-valid': name.valid
-                  }" required >
-                </mat-form-field>
-            
-                <mat-form-field class="example-full-width form-group">
-                  <mat-label>Email</mat-label>
-                  <input type="email" matInput placeholder="email@email.com" formControlName="email" [ngClass]="{
+                  }" required>
+          <mat-error *ngIf="name.errors && name.dirty">Required Field</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width form-group">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="email@email.com" formControlName="email" [ngClass]="{
                     'is-invalid':
                       email.errors && (email.touched || email.dirty),
                     'is-valid': email.valid
-                  }" required>
-                 
-                </mat-form-field>
-              </form>
-        </div>
-    </div>
-</div>
+                  }">
+          <mat-error *ngIf="email.dirty && email.errors">enter a valid email</mat-error>
+        </mat-form-field>
 
-  
+        <mat-form-field class="example-full-width form-group">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="**********" formControlName="password" [ngClass]="{
+                    'is-invalid':
+                      password.errors && (password.touched || password.dirty),
+                    'is-valid': password.valid
+                  }" required>
+                  <mat-error *ngIf="password.dirty && password.errors">enter a valid password</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width form-group">
+          <mat-label>Confirm Password</mat-label>
+          <input type="password" matInput placeholder="*********" formControlName="confirm_password" [ngClass]="{
+                    'is-invalid':
+                    confirm_password.errors && (confirm_password.touched || confirm_password.dirty),
+                    'is-valid': confirm_password.valid
+                  }" required>
+                  <mat-error *ngIf="confirm_password.dirty && confirm_password.errors">Passwords Not Matched</mat-error>
+        </mat-form-field>
+
+        <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/login" class="text-decoration-none">Already have
+            an account?Login!</a></p>
+            <button class="" mat-raised-button color="accent">Cancel</button>
+            <button mat-raised-button color="primary" type="submit" (ngSubmit)="myForm1.valid && onSubmit()"
+            class="ms-2">
+            Register
+          </button>
+         
+      </form>
+    </div>
+  </div>
+</div>

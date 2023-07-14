@@ -1,0 +1,39 @@
+<p-toast position="top-center" key="tc" ></p-toast>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col">
+        <form class="example-form container" [formGroup]="Login_Form" (ngSubmit)="Login_Form.valid && onSubmit()"
+          novalidate>
+  
+          <mat-form-field class="example-full-width form-group">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput placeholder="email@email.com" formControlName="email" [ngClass]="{
+                      'is-invalid':
+                        email.errors && (email.touched || email.dirty),
+                      'is-valid': email.valid
+                    }">
+            <mat-error *ngIf="email.dirty && email.errors">enter a valid email</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width form-group">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="**********" formControlName="password" [ngClass]="{
+                      'is-invalid':
+                        password.errors && (password.touched || password.dirty),
+                      'is-valid': password.valid
+                    }" required>
+                    <mat-error *ngIf="password.dirty && password.errors">enter a valid password</mat-error>
+          </mat-form-field>
+  
+  
+          <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/signup" class="text-decoration-none">New User? Register Now!</a></p>
+              <button class="" mat-raised-button color="accent">Cancel</button>
+              <button mat-raised-button color="primary" type="submit" (ngSubmit)="Login_Form.valid && onSubmit()"
+              class="ms-2">
+              Login
+            </button>
+           
+        </form>
+      </div>
+    </div>
+  </div>

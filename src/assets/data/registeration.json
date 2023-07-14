@@ -1,0 +1,28 @@
+{
+  "registeration": [
+    {
+      "firstname": "Sharon D",
+      "email": "chicken959730@gmail.com",
+      "password": "Basket9486!",
+      "confirm_password": "Basket9486!",
+      "isActive": false,
+      "id": 1
+    },
+    {
+      "firstname": "Sharon D",
+      "email": "chicken959730@gmail.com",
+      "password": "Basket9486!",
+      "confirm_password": "Basket9486!",
+      "isActive": false,
+      "id": 2
+    },
+    {
+      "firstname": "sads",
+      "email": "sharonantony2408@gmail.com",
+      "password": "dfgdfzg@Ddsf232",
+      "confirm_password": "Dsdf@355fbgfc",
+      "isActive": true,
+      "id": 3
+    }
+  ]
+}
