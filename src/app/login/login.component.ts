@@ -36,7 +36,7 @@ this.register.getCredentials().subscribe((res)=>{
       if (user) {
         this.Login_Form.reset();
         localStorage.setItem('token', Math.random().toString())
-        this.router.navigate(['']);
+        this.router.navigate(['/assign-tasks']);
         this.alert.add({
           key: 'tc',
           severity: 'success',

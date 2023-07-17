@@ -26,6 +26,7 @@ export class SignupComponent implements OnInit {
   password!: FormControl | any;
   confirm_password!: FormControl | any;
 
+
   // Submit
   onSubmit() {
     this.register.get_User_Details(this.myForm1.value);
@@ -69,6 +70,7 @@ export class SignupComponent implements OnInit {
       password: this.password,
       confirm_password: this.confirm_password,
       isActive: this.builder.control(false),
+      assigned_tasks:this.builder.control([])
     });
   }
 }

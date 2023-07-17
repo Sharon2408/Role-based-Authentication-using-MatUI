@@ -6,6 +6,52 @@
       "password": "Basket9486!",
       "confirm_password": "Basket9486!",
       "isActive": false,
+      "assigned_tasks": [
+        {
+          "task": "asdsd",
+          "id": 1
+        },
+        {
+          "task": "dwfef3ef",
+          "id": 2
+        },
+        {
+          "task": "ffhufhfh",
+          "id": 3
+        },
+        {
+          "task": "dfvdfv",
+          "id": 4
+        },
+        {
+          "task": "dfvdfcvdfv",
+          "id": 5
+        },
+        {
+          "task": "dfvdfsvdfsv",
+          "id": 6
+        },
+        {
+          "task": "dfvdfvdv",
+          "id": 7
+        },
+        {
+          "task": "dfvdsfv",
+          "id": 8
+        },
+        {
+          "task": "dfvdsvd",
+          "id": 9
+        },
+        {
+          "task": "ykjyh",
+          "id": 10
+        },
+        {
+          "task": "hgjm,ghngh",
+          "id": 1
+        }
+      ],
       "id": 1
     },
     {
@@ -14,6 +60,12 @@
       "password": "Basket9486!",
       "confirm_password": "Basket9486!",
       "isActive": false,
+      "assigned_tasks": [
+        {
+          "task": "fvdfgdfg",
+          "id": 1
+        }
+      ],
       "id": 2
     },
     {
@@ -21,8 +73,18 @@
       "email": "sharonantony2408@gmail.com",
       "password": "dfgdfzg@Ddsf232",
       "confirm_password": "Dsdf@355fbgfc",
-      "isActive": true,
+      "isActive": false,
+      "assigned_tasks": [],
       "id": 3
+    },
+    {
+      "firstname": "Kumar",
+      "email": "kumar@123.com",
+      "password": "Kumar@123",
+      "confirm_password": "Kumar@123",
+      "isActive": true,
+      "assigned_tasks": [],
+      "id": 4
     }
   ]
 }
