@@ -16,7 +16,7 @@ constructor(private register:RegistrationService, private router:Router, private
   Login_Form!: FormGroup;
   email!: FormControl;
   password!: FormControl;
-
+  Radiobutton!: FormControl;
   formdata:Registration[]=[];
 
   onSubmit(){
@@ -25,9 +25,22 @@ this.register.getCredentials().subscribe((res)=>{
   const user = this.formdata.find((a: any) => {
             if (
               a.email === this.Login_Form.value.email &&
-              a.password === this.Login_Form.value.password
+              a.password === this.Login_Form.value.password &&
+              a.role=='user'
+              
             ) {
               this.register.isActive(a, a.id,);
+              localStorage.setItem('role','user');
+              return true;
+            }
+           else if (
+              a.email === this.Login_Form.value.email &&
+              a.password === this.Login_Form.value.password &&
+              a.role=='admin'
+              
+            ) {
+              this.register.isActive(a, a.id,);
+              localStorage.setItem('role','admin');
               return true;
             }
             return false;
@@ -35,8 +48,8 @@ this.register.getCredentials().subscribe((res)=>{
           // To Genrate token if user is found
       if (user) {
         this.Login_Form.reset();
-        localStorage.setItem('token', Math.random().toString())
-        this.router.navigate(['/assign-tasks']);
+        localStorage.setItem('token', Math.random().toString());
+        this.router.navigate(['/task']);
         this.alert.add({
           key: 'tc',
           severity: 'success',
@@ -68,9 +81,11 @@ this.register.getCredentials().subscribe((res)=>{
       ),
     ]);
 
+    this.Radiobutton = new FormControl('',[Validators.required])
     this.Login_Form = new FormGroup({
       email: this.email,
       password: this.password,
+      Radiobutton:this.Radiobutton
     },
     );
   }

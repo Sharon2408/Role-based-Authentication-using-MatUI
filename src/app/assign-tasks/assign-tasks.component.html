@@ -8,6 +8,7 @@
                         <th scope="col">NAME</th>
                         <th scope="col">EMAIL</th>
                         <th scope="col" class="text-center">TASKS</th>
+                        <th scope="col" class="text-center">TASKS ASSIGNED</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -22,7 +23,7 @@
                             <a class="ms-4" mat-raised-button color="accent" >UPDATE</a>
                             <a class="ms-4" mat-raised-button color="warn">DELETE</a>
                         </td>
-                    
+                    <td class="text-center"  data-bs-target="#staticBackdrop"  data-bs-toggle="modal"><a  mat-raised-button (click)="showUser(x)">View Task</a></td>
                     </tr>
                 </ng-container>
                    
@@ -48,9 +49,16 @@
                   <label for="message-text" class="col-form-label">Task:</label>
                   <textarea class="form-control" formControlName="task"></textarea>
                 </div>
+                <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button type="submit" class="btn btn-primary">Assign</button>
+                </div>
               </form>
+              <h1>Tasks Assigned to - {{username}}</h1>
+              <ng-container *ngFor="let x of taskList">
+            <p>Task{{x.id}} - {{x.task}}</p>
+               
+           </ng-container>
         </div>
         
       </div>
@@ -58,10 +66,5 @@
   </div>
 </ng-container>
 
-<table>
-    <tbody *ngFor="let x of user_data">
-        <tr *ngFor="let y of x.assigned_tasks">
-            {{y.task}}
-        </tr>
-    </tbody>
-</table>
+
+  

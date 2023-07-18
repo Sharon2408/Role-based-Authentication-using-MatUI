@@ -17,11 +17,12 @@ import { SignupComponent } from './signup/signup.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { LoginComponent } from './login/login.component';
-
+import {MatRadioModule} from '@angular/material/radio';
 // Primeng
 import { ToastModule } from 'primeng/toast'
 import { MessageService } from 'primeng/api';
 import { AssignTasksComponent } from './assign-tasks/assign-tasks.component';
+import { ViewTaskComponent } from './view-task/view-task.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AssignTasksComponent } from './assign-tasks/assign-tasks.component';
     NavbarComponent,
     SignupComponent,
     LoginComponent,
-    AssignTasksComponent
+    AssignTasksComponent,
+    ViewTaskComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { AssignTasksComponent } from './assign-tasks/assign-tasks.component';
     ReactiveFormsModule,
     HttpClientModule,
     ToastModule,
+    MatRadioModule
   
   ],
   providers: [MessageService],

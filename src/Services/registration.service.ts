@@ -26,7 +26,13 @@ export class RegistrationService {
     item.isActive=true;
     return this.http.put(reg,item).subscribe(()=>{})
   }
+  isDeactive(item:Registration,id:number){
+    let reg = this.registerUrl +'/'+ id
+    item.isActive=false;
+    return this.http.put(reg,item).subscribe(()=>{})
+  }
 
+  
   assign_task(item:Registration,id:number,form_value:any){
     let reg = this.registerUrl +'/'+ id
     item.assigned_tasks.push(form_value)

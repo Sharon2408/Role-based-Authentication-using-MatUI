@@ -2,7 +2,7 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col">
-        <form class="example-form container" [formGroup]="Login_Form" (ngSubmit)="Login_Form.valid && onSubmit()"
+        <form class="example-form container" [formGroup]="Login_Form" (ngSubmit)="onSubmit()"
           novalidate>
   
           <mat-form-field class="example-full-width form-group">
@@ -24,11 +24,10 @@
                     }" required>
                     <mat-error *ngIf="password.dirty && password.errors">enter a valid password</mat-error>
           </mat-form-field>
-  
-  
+
           <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/signup" class="text-decoration-none">New User? Register Now!</a></p>
               <button class="" mat-raised-button color="accent">Cancel</button>
-              <button mat-raised-button color="primary" type="submit" (ngSubmit)="Login_Form.valid && onSubmit()"
+              <button mat-raised-button color="primary" type="submit" 
               class="ms-2">
               Login
             </button>
