@@ -5,37 +5,17 @@
       "email": "chicken959730@gmail.com",
       "password": "Basket9486!",
       "confirm_password": "Basket9486!",
-      "isActive": false,
+      "isActive": true,
       "assigned_tasks": [
         {
-          "task": "fvdfgdfg",
+          "duedate": "2023-07-20",
+          "task": "fdssf",
+          "date": "7/19/2023",
+          "status": "Assigned",
           "id": 1
-        },
-        {
-          "task": "cscc",
-          "id": 2
-        },
-        {
-          "task": "Hello",
-          "id": 3
         }
       ],
       "id": 1,
-      "role": "user"
-    },
-    {
-      "firstname": "Sharon D",
-      "email": "chicken959730@gmail.com",
-      "password": "Basket9486!",
-      "confirm_password": "Basket9486!",
-      "isActive": false,
-      "assigned_tasks": [
-        {
-          "task": "fvdfgdfg",
-          "id": 1
-        }
-      ],
-      "id": 2,
       "role": "user"
     },
     {
@@ -44,13 +24,8 @@
       "password": "dfgdfzg@Ddsf232",
       "confirm_password": "Dsdf@355fbgfc",
       "isActive": false,
-      "assigned_tasks": [
-        {
-          "task": "hi",
-          "id": 1
-        }
-      ],
-      "id": 3,
+      "assigned_tasks": [],
+      "id": 2,
       "role": "user"
     },
     {
@@ -59,13 +34,8 @@
       "password": "Kumar@123",
       "confirm_password": "Kumar@123",
       "isActive": false,
-      "assigned_tasks": [
-        {
-          "task": "Do it Now",
-          "id": 1
-        }
-      ],
-      "id": 4,
+      "assigned_tasks": [],
+      "id": 3,
       "role": "admin"
     }
   ]

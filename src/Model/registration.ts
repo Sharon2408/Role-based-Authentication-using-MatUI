@@ -7,10 +7,12 @@ export interface Registration {
     isActive:boolean;
     assigned_tasks:Array<string>;
     role:string;
+    
 }
 
 export interface User_Task{
     id:number;
     task:string;
+    date:Date;
 }
 

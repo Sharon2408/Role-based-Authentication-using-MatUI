@@ -35,8 +35,7 @@ export class NavbarComponent implements OnInit {
       const confirmation = confirm('You will be Logged out!!');
       this.formdata.find((a: any) => {
         if (confirmation && a.isActive == true) {
-          localStorage.removeItem('token');
-          localStorage.removeItem('role');
+          localStorage.clear()
           this.hide = false;
           this.register.isDeactive(a, a.id);
           this.alert.add({

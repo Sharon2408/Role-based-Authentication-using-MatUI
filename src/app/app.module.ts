@@ -18,6 +18,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { LoginComponent } from './login/login.component';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 // Primeng
 import { ToastModule } from 'primeng/toast'
 import { MessageService } from 'primeng/api';
@@ -47,7 +49,9 @@ import { ViewTaskComponent } from './view-task/view-task.component';
     ReactiveFormsModule,
     HttpClientModule,
     ToastModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   
   ],
   providers: [MessageService],

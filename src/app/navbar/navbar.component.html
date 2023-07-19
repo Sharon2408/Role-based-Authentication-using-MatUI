@@ -1,12 +1,14 @@
-<p-toast position="top-center" key="tc" ></p-toast>
+<p-toast position="top-center" key="tc"></p-toast>
 <mat-toolbar color="primary" class="container-fluid navbar">
     <span>Authentication</span>
     <div class="spacer"></div>
-    <a mat-stroked-button class="me-2" color="accent" routerLink="/task">Assign Tasks</a>
-    <a mat-stroked-button class="me-2" color="accent" routerLink="/viewtask">View My Tasks</a>
-    <ng-container>
-    <a mat-raised-button routerLink="/signup" *ngIf="!hide">Sign Up</a>
-    <a class="ms-2" mat-raised-button routerLink="/login" *ngIf="!hide" >Sign In</a>
-    <a class="ms-2" mat-raised-button  *ngIf="hide" (click)="logout()" >Logout</a>
-</ng-container>
+    <ng-container *ngFor="let x of formdata">
+        <ng-container *ngIf="x.isActive">
+            <a mat-button class="me-2" *ngIf="x.role=='admin'" routerLink="/task">Assign Tasks</a>
+            <a mat-button class="me-2" *ngIf="x.role !=='admin'" routerLink="/viewtask">View My Tasks</a>
+        </ng-container>
+    </ng-container>
+    <a mat-raised-button routerLink="/signup" *ngIf="!hide">Sign Up	<mat-icon>verified_user</mat-icon></a>
+    <a class="ms-2" mat-raised-button routerLink="/login" *ngIf="!hide">Sign In<mat-icon>account_circle</mat-icon></a>
+    <a class="ms-2" mat-raised-button *ngIf="hide" (click)="logout()">Logout</a>
 </mat-toolbar>
