@@ -15,7 +15,7 @@ const routes: Routes = [
     path:'login',component:LoginComponent
   },
   {
-    path:'task',component:AssignTasksComponent,
+    path:'task',component:AssignTasksComponent,//canActivate:[authGaurdGuard]
   },
   {
     path:'viewtask',component:ViewTaskComponent,canActivate:[viewTaskGuard]

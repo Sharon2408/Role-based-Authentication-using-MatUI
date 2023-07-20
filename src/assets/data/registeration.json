@@ -8,32 +8,18 @@
       "isActive": true,
       "assigned_tasks": [
         {
-          "duedate": "2023-07-28",
-          "task": "sharon ke ku",
+          "duedate": "2023-07-21",
+          "task": "Summa",
           "date": "7/20/2023",
-          "status": "Assigned",
+          "status": "Completed",
           "id": 1
         },
         {
-          "duedate": "2023-07-28",
-          "task": "lovelysharon Changed again and again",
-          "date": "7/20/2023",
-          "status": "Assigned",
-          "id": 2
-        },
-        {
-          "duedate": "2023-07-21",
-          "task": "dfvgfgfg",
-          "date": "7/20/2023",
-          "status": "Assigned",
-          "id": 3
-        },
-        {
           "duedate": "2023-07-29",
-          "task": "Im SORRRY",
+          "task": "Editing Status LOve",
           "date": "7/20/2023",
-          "status": "Assigned",
-          "id": 4
+          "status": "In Progress",
+          "id": 2
         }
       ],
       "id": 1,
@@ -59,6 +45,13 @@
           "date": "7/20/2023",
           "status": "Assigned",
           "id": 2
+        },
+        {
+          "duedate": "2023-07-28",
+          "task": "To ",
+          "date": "7/20/2023",
+          "status": "Assigned",
+          "id": 3
         }
       ],
       "id": 2,

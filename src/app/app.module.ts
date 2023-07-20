@@ -52,7 +52,6 @@ import { ViewTaskComponent } from './view-task/view-task.component';
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule
-  
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

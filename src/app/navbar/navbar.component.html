@@ -2,13 +2,18 @@
 <mat-toolbar color="primary" class="container-fluid navbar">
     <span>Authentication</span>
     <div class="spacer"></div>
-    <ng-container *ngFor="let x of formdata">
+    <!-- <ng-container *ngFor="let x of formdata">
         <ng-container *ngIf="x.isActive">
             <a mat-button class="me-2" *ngIf="x.role=='admin'" routerLink="/task">Assign Tasks</a>
             <a mat-button class="me-2" *ngIf="x.role !=='admin'" routerLink="/viewtask">View My Tasks</a>
         </ng-container>
-    </ng-container>
-    <a mat-raised-button routerLink="/signup" *ngIf="!hide">Sign Up	<mat-icon>verified_user</mat-icon></a>
+    </ng-container> -->
+    <a mat-raised-button routerLink="/signup" *ngIf="!hide">Sign Up <mat-icon>verified_user</mat-icon></a>
     <a class="ms-2" mat-raised-button routerLink="/login" *ngIf="!hide">Sign In<mat-icon>account_circle</mat-icon></a>
+    <ng-container *ngFor="let x of formdata">
+        <ng-container *ngIf="x.isActive">
+            <a mat-button color="accent">{{x.firstname}}<mat-icon class="">account_circle_outlined</mat-icon></a>
+        </ng-container>
+    </ng-container>
     <a class="ms-2" mat-raised-button *ngIf="hide" (click)="logout()">Logout</a>
 </mat-toolbar>

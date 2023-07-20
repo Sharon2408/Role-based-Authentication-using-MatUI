@@ -3,33 +3,26 @@ import { CanActivateFn, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 
 export const authGaurdGuard: CanActivateFn = (route, state) => {
-  const token = localStorage.getItem('token');
   const role = localStorage.getItem('role')
-    const router = inject(Router)
-    const alertservice = inject(MessageService)
- 
-   if(role =='admin'){
+  const router = inject(Router)
+  const alertservice = inject(MessageService)
+
+  if (role == 'admin') {
+    
     router.navigate(['/task'])
     return true
-   }
-  else if(role=='user'){
+  }
+  else if (role == 'user') {
     router.navigate(['/viewtask'])
-    // alertservice.add({
-    //   key:"tc",
-    //   severity:"error",
-    //   summary:"Only Authorized Users"
-    //     })
+    console.log('error')
     return false
 
-   }
-  else
-     {
-      alertservice.add({
-    key:"tc",
-    severity:"error",
-    summary:"Only Authorized Users"
-      })
-      return false
-     }
-    
+  }
+  alertservice.add({
+    key: "tc",
+    severity: "error",
+    summary: "Only Authorized Users"
+  })
+
+  return false
 };

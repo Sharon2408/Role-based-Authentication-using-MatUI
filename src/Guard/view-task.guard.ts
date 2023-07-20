@@ -9,7 +9,7 @@ export const viewTaskGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
   const alertservice = inject(MessageService);
 
-  if (token && role == 'user') {
+  if (role == 'user') {
     return true;
   } else {
     router.navigate(['/login'])

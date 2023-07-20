@@ -49,7 +49,6 @@ export class LoginComponent implements OnInit {
       // To Genrate token if user is found
       if (user) {
         this.Login_Form.reset();
-          localStorage.setItem('token', Math.random().toString());
         this.router.navigate(['/task']);
         this.alert.add({
           key: 'tc',

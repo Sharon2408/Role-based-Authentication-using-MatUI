@@ -44,20 +44,13 @@ export class AssignTasksComponent implements OnInit {
       task: this.task,
     });
   }
+   
   showUser(user: Registration) {
     this.taskList.length = 0;
     this.username = user.firstname;
     this.assignedUser = user;
     for (const task of this.assignedUser.assigned_tasks) {
       this.taskList.push(task);
-      // console.log(task.task)
-      // this.taskList.replaceall(task.task,'suma')
-      //  const c= task.task.toString()
-      //   console.log(typeof(c))
-      // const b = c.replaceAll(task.task,)
-      // console.log(b)
-      // task.task=b
-      // console.log(task.task)
     }
   }
 
@@ -89,21 +82,11 @@ export class AssignTasksComponent implements OnInit {
   }
 
   update_task(task: User_Task) {
-    console.log(task);
     this.modifiedTask = task;
   }
 
   modified_task() {
-    console.log(this.assignedUser);
-    this.assignedUser.assigned_tasks = Array.from(
-      this.assignedUser.assigned_tasks
-    );
-    // this.assignedUser.assigned_tasks.push(this.modifiedTask);
-    console.log(this.assignedUser);
-    const url =
-      'http://localhost:3000/registeration' + '/' + this.assignedUser.id;
-    return this.http.put(url, this.assignedUser).subscribe((res) => {
-      console.log(res);
-    });
+    this.assignedUser.assigned_tasks = Array.from(this.assignedUser.assigned_tasks);
+    this.register.edit_task(this.assignedUser,this.assignedUser.id)
   }
 }
