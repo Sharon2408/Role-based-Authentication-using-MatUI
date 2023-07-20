@@ -8,23 +8,59 @@
       "isActive": true,
       "assigned_tasks": [
         {
-          "duedate": "2023-07-20",
-          "task": "fdssf",
-          "date": "7/19/2023",
+          "duedate": "2023-07-28",
+          "task": "sharon ke ku",
+          "date": "7/20/2023",
           "status": "Assigned",
           "id": 1
+        },
+        {
+          "duedate": "2023-07-28",
+          "task": "lovelysharon Changed again and again",
+          "date": "7/20/2023",
+          "status": "Assigned",
+          "id": 2
+        },
+        {
+          "duedate": "2023-07-21",
+          "task": "dfvgfgfg",
+          "date": "7/20/2023",
+          "status": "Assigned",
+          "id": 3
+        },
+        {
+          "duedate": "2023-07-29",
+          "task": "Im SORRRY",
+          "date": "7/20/2023",
+          "status": "Assigned",
+          "id": 4
         }
       ],
       "id": 1,
       "role": "user"
     },
     {
-      "firstname": "sads",
+      "firstname": "Srikanth",
       "email": "sharonantony2408@gmail.com",
       "password": "dfgdfzg@Ddsf232",
       "confirm_password": "Dsdf@355fbgfc",
       "isActive": false,
-      "assigned_tasks": [],
+      "assigned_tasks": [
+        {
+          "duedate": "2023-07-28",
+          "task": "dfgdgfgd",
+          "date": "7/20/2023",
+          "status": "Assigned",
+          "id": 1
+        },
+        {
+          "duedate": "2023-08-01",
+          "task": "zdxczxcz",
+          "date": "7/20/2023",
+          "status": "Assigned",
+          "id": 2
+        }
+      ],
       "id": 2,
       "role": "user"
     },

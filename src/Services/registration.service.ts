@@ -39,5 +39,9 @@ export class RegistrationService {
     return this.http.put<Registration>(reg,item).subscribe();
   }
 
+  edit_task(item:Registration,id:number){
+    let reg = this.registerUrl +'/'+ id
+    item.assigned_tasks.push()
+  }
 
 }
