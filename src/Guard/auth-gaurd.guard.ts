@@ -7,17 +7,21 @@ export const authGaurdGuard: CanActivateFn = (route, state) => {
   const role = localStorage.getItem('role')
     const router = inject(Router)
     const alertservice = inject(MessageService)
-   if(token && role=='user'){
+ 
+   if(role =='admin'){
+    router.navigate(['/task'])
+    return true
+   }
+  else if(role=='user'){
     router.navigate(['/viewtask'])
+    // alertservice.add({
+    //   key:"tc",
+    //   severity:"error",
+    //   summary:"Only Authorized Users"
+    //     })
     return false
 
    }
-  else if(token && role=='admin'){
-    router.navigate(['/task'])
-    return true
-
-   }
-
   else
      {
       alertservice.add({

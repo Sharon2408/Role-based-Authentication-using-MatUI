@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Movie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MovieDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="MovieName"/>
+              <xs:element type="xs:string" name="Language"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cast">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Actor"/>
+              <xs:element type="xs:string" name="Actress"/>
+              <xs:element type="xs:string" name="Comedian"/>
+              <xs:element type="xs:string" name="CoActor"/>
+              <xs:element type="xs:string" name="CoActress"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Crew">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Director"/>
+              <xs:element type="xs:string" name="Choreographer"/>
+              <xs:element type="xs:string" name="MusicDirector"/>
+              <xs:element type="xs:string" name="Singer"/>
+              <xs:element type="xs:string" name="Lyricist"/>
+              <xs:element type="xs:string" name="Cinematographer"/>
+              <xs:element type="xs:string" name="lightman"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

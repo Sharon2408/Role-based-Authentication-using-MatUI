@@ -23,8 +23,8 @@ export class SignupComponent implements OnInit {
   myForm1!: FormGroup;
   name!: FormControl;
   email!: FormControl;
-  password!: FormControl | any;
-  confirm_password!: FormControl | any;
+  password!: FormControl;
+  confirm_password!: FormControl;
 
 
   // Submit

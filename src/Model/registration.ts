@@ -5,12 +5,16 @@ export interface Registration {
     password:string;
     confirm_paswword:string;
     isActive:boolean;
-    assigned_tasks:Array<string>;
+    assigned_tasks:User_Task[];
     role:string;
+    
 }
 
 export interface User_Task{
     id:number;
     task:string;
+    date:Date;
+    duedate:Date;
+    status:string;
 }
 

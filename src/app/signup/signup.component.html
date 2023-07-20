@@ -36,7 +36,7 @@
                   <mat-error *ngIf="password.dirty && password.errors">enter a valid password</mat-error>
         </mat-form-field>
 
-        <mat-form-field class="example-full-width form-group">
+        <!-- <mat-form-field class="example-full-width form-group">
           <mat-label>Confirm Password</mat-label>
           <input type="password" matInput placeholder="*********" formControlName="confirm_password" [ngClass]="{
                     'is-invalid':
@@ -44,13 +44,12 @@
                     'is-valid': confirm_password.valid
                   }" required>
                   <mat-error *ngIf="confirm_password.dirty && confirm_password.errors">Passwords Not Matched</mat-error>
-        </mat-form-field>
+        </mat-form-field> -->
 
         <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/login" class="text-decoration-none">Already have
             an account?Login!</a></p>
-            <button class="" mat-raised-button color="accent">Cancel</button>
             <button mat-raised-button color="primary" type="submit" (ngSubmit)="myForm1.valid && onSubmit()"
-            class="ms-2">
+            class="example-full-width">
             Register
           </button>
          
