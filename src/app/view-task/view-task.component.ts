@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from 'src/Services/registration.service';
 import { Registration,User_Task } from 'src/Model/registration';
 
+
 @Component({
   selector: 'app-view-task',
   templateUrl: './view-task.component.html',
@@ -22,6 +23,7 @@ export class ViewTaskComponent implements OnInit {
   };
   user_task:any[]=[]
   modifiedStatus: User_Task | any = [];
+  search:string = '';
   ngOnInit(): void {
     this.register.getCredentials().subscribe((res)=>{this.user=res
     for (const task of this.user) {

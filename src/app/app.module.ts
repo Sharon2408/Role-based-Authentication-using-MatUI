@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AssignTasksComponent } from './assign-tasks/assign-tasks.component';
+import { ViewTaskComponent } from './view-task/view-task.component';
 
 // Material UI
 import {MatIconModule} from '@angular/material/icon';
@@ -23,8 +25,8 @@ import {MatNativeDateModule} from '@angular/material/core';
 // Primeng
 import { ToastModule } from 'primeng/toast'
 import { MessageService } from 'primeng/api';
-import { AssignTasksComponent } from './assign-tasks/assign-tasks.component';
-import { ViewTaskComponent } from './view-task/view-task.component';
+import { SearchPipe } from 'src/pipes/search.pipe';
+import { TreeTableModule } from 'primeng/treetable';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { ViewTaskComponent } from './view-task/view-task.component';
     SignupComponent,
     LoginComponent,
     AssignTasksComponent,
-    ViewTaskComponent
+    ViewTaskComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { ViewTaskComponent } from './view-task/view-task.component';
     ToastModule,
     MatRadioModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    TreeTableModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

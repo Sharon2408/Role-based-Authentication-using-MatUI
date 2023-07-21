@@ -9,7 +9,6 @@ export const authGaurdGuard: CanActivateFn = (route, state) => {
 
   if (role == 'admin') {
     
-    router.navigate(['/task'])
     return true
   }
   else if (role == 'user') {

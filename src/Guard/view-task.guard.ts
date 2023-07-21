@@ -20,4 +20,5 @@ export const viewTaskGuard: CanActivateFn = (route, state) => {
     });
     return false;
   }
+  
 };
