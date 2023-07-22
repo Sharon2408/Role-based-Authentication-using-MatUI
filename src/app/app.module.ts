@@ -27,6 +27,7 @@ import { ToastModule } from 'primeng/toast'
 import { MessageService } from 'primeng/api';
 import { SearchPipe } from 'src/pipes/search.pipe';
 import { TreeTableModule } from 'primeng/treetable';
+import { SortPipe } from '../pipes/sort.pipe';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { TreeTableModule } from 'primeng/treetable';
     LoginComponent,
     AssignTasksComponent,
     ViewTaskComponent,
-    SearchPipe
+    SearchPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,

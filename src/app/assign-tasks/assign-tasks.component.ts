@@ -34,7 +34,7 @@ export class AssignTasksComponent implements OnInit {
   previousTask = '';
   taskList: any = [];
   modifiedTask: User_Task | any = [];
-
+sort:string='';
   ngOnInit(): void {
     this.register.getCredentials().subscribe((res) => (this.user_data = res));
     this.task = new FormControl('', [Validators.required]);

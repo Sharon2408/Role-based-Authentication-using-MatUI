@@ -1,4 +1,24 @@
-<input type="text" [(ngModel)]="search"  placeholder="Search">
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <label for="">Search by Task</label><br>
+            <input type="text" [(ngModel)]="search" placeholder="Search">
+        </div>
+        <!-- <div class="col">
+            <label for="" [(ngModel)]="sort">Sort by Status</label><br>
+            <ng-container *ngFor="let x of user">
+                <ng-container *ngIf="x.isActive">
+                    <ng-container *ngFor="let task of user_task | search:search">
+            <select name="" id="">
+                <option value="">--Select</option>
+                <option value="">Completed</option>
+                <option value="">In Progress</option>
+            </select>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+    </div> -->
+</div>
 <div class="container">
     <div class="row">
         <table class="table table-striped text-center">
@@ -14,14 +34,16 @@
             <tbody>
                 <ng-container *ngFor="let x of user">
                     <ng-container *ngIf="x.isActive">
-                        <ng-container *ngFor="let task of user_task ">
+                        <ng-container *ngFor="let task of user_task | search:search">
                             <tr>
                                 <td>{{task.id}}</td>
                                 <td>{{task.task}}</td>
                                 <td>{{task.date}}</td>
                                 <td>{{task.duedate}}</td>
                                 <td>
-                                    <select class="form-control" [(ngModel)]="task.status" (click)="update_Status(task.status);update_Modified_Status(x)" name="State" id="">
+                                    <select class="form-control" [(ngModel)]="task.status"
+                                        (click)="update_Status(task.status);update_Modified_Status(x)" name="State"
+                                        id="">
                                         <option disabled>Assigned</option>
                                         <option>In Progress</option>
                                         <option>Completed</option>

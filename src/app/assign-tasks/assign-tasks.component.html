@@ -1,4 +1,11 @@
 <div class="container">
+    <div class="row">
+        <div class="col-2">
+            <label for="">Search by Name</label><br>
+            <input class="form-control" type="text" [(ngModel)]="sort" placeholder="Search">
+        </div>
+    </div>
+    <div class="container">
   <div class="row">
     <div class="col">
       <table class="table table-striped text-center">
@@ -12,7 +19,7 @@
           </tr>
         </thead>
         <tbody>
-          <ng-container *ngFor="let x of user_data">
+          <ng-container *ngFor="let x of user_data | sort:sort">
             <tr *ngIf="x.role=='user'">
 
               <th scope="row">{{x.id}}</th>

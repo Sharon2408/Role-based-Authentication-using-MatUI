@@ -2,8 +2,7 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col">
-      <form class="example-form container" [formGroup]="myForm1" (ngSubmit)="myForm1.valid && onSubmit()"
-        novalidate>
+      <form class="example-form container" [formGroup]="myForm1" (ngSubmit)="myForm1.valid && onSubmit()" >
 
         <mat-form-field class="example-full-width form-group">
           <mat-label>Name</mat-label>
@@ -12,7 +11,8 @@
                       name.errors && (name.touched || name.dirty),
                     'is-valid': name.valid
                   }" required>
-          <mat-error *ngIf="name.errors && name.dirty">Required Field</mat-error>
+          <mat-error *ngIf="name.errors">Required Field</mat-error>
+    
         </mat-form-field>
 
 
@@ -23,7 +23,8 @@
                       email.errors && (email.touched || email.dirty),
                     'is-valid': email.valid
                   }">
-          <mat-error *ngIf="email.dirty && email.errors">enter a valid email</mat-error>
+          <mat-error *ngIf="email.dirty && email.errors">Enter a valid email</mat-error>
+          <mat-error *ngIf="email.errors||email.touched">Required Field</mat-error>
         </mat-form-field>
 
         <mat-form-field class="example-full-width form-group">
@@ -33,22 +34,13 @@
                       password.errors && (password.touched || password.dirty),
                     'is-valid': password.valid
                   }" required>
-                  <mat-error *ngIf="password.dirty && password.errors">enter a valid password</mat-error>
+                  <mat-error *ngIf="password.dirty && password.errors">Password must be 8 charachters long 1Uppercase 1Special symbol and 1 Number </mat-error>
+                  <mat-error *ngIf="password.errors||password.touched">Required Field</mat-error>
         </mat-form-field>
-
-        <!-- <mat-form-field class="example-full-width form-group">
-          <mat-label>Confirm Password</mat-label>
-          <input type="password" matInput placeholder="*********" formControlName="confirm_password" [ngClass]="{
-                    'is-invalid':
-                    confirm_password.errors && (confirm_password.touched || confirm_password.dirty),
-                    'is-valid': confirm_password.valid
-                  }" required>
-                  <mat-error *ngIf="confirm_password.dirty && confirm_password.errors">Passwords Not Matched</mat-error>
-        </mat-form-field> -->
 
         <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/login" class="text-decoration-none">Already have
             an account?Login!</a></p>
-            <button mat-raised-button color="primary" type="submit" (ngSubmit)="myForm1.valid && onSubmit()"
+            <button mat-raised-button color="primary" type="submit"  
             class="example-full-width">
             Register
           </button>

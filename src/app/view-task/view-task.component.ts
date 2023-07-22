@@ -24,6 +24,7 @@ export class ViewTaskComponent implements OnInit {
   user_task:any[]=[]
   modifiedStatus: User_Task | any = [];
   search:string = '';
+  sort:string='';
   ngOnInit(): void {
     this.register.getCredentials().subscribe((res)=>{this.user=res
     for (const task of this.user) {

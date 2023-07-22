@@ -13,6 +13,7 @@
                       'is-valid': email.valid
                     }">
             <mat-error *ngIf="email.dirty && email.errors">enter a valid email</mat-error>
+            <mat-error *ngIf="email.touched || email.errors">Enter a valid email</mat-error>
           </mat-form-field>
   
           <mat-form-field class="example-full-width form-group">
@@ -22,7 +23,8 @@
                         password.errors && (password.touched || password.dirty),
                       'is-valid': password.valid
                     }" required>
-                    <mat-error *ngIf="password.dirty && password.errors">enter a valid password</mat-error>
+                    <mat-error *ngIf="password.dirty && password.errors">Required Field</mat-error>
+                    <mat-error *ngIf="password.touched || password.errors">Enter a valid Password</mat-error>
           </mat-form-field>
 
           <p class=" pt-3 text-secondary d-flex justify-content-center"><a routerLink="/signup" class="text-decoration-none">New User? Register Now!</a></p>

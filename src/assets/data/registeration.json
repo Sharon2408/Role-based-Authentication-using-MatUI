@@ -5,11 +5,11 @@
       "email": "chicken959730@gmail.com",
       "password": "Basket9486!",
       "confirm_password": "Basket9486!",
-      "isActive": true,
+      "isActive": false,
       "assigned_tasks": [
         {
           "duedate": "2023-07-21",
-          "task": "Summa",
+          "task": "",
           "date": "7/20/2023",
           "status": "Completed",
           "id": 1
@@ -20,6 +20,13 @@
           "date": "7/20/2023",
           "status": "In Progress",
           "id": 2
+        },
+        {
+          "duedate": "2023-07-28",
+          "task": "Sample",
+          "date": "7/22/2023",
+          "status": "In Progress",
+          "id": 3
         }
       ],
       "id": 1,
@@ -66,6 +73,16 @@
       "assigned_tasks": [],
       "id": 3,
       "role": "admin"
+    },
+    {
+      "firstname": "sdfsf",
+      "email": "dfs@dff",
+      "password": "Basdf@123",
+      "confirm_password": "",
+      "isActive": false,
+      "assigned_tasks": [],
+      "role": "user",
+      "id": 4
     }
   ]
 }

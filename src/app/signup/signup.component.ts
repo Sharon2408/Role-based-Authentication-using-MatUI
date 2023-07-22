@@ -25,10 +25,12 @@ export class SignupComponent implements OnInit {
   email!: FormControl;
   password!: FormControl;
   confirm_password!: FormControl;
+  role:string='';
 
 
   // Submit
   onSubmit() {
+    console.log('Error')
     this.register.get_User_Details(this.myForm1.value);
     this.alert.add({
       key: 'tc',
@@ -70,7 +72,8 @@ export class SignupComponent implements OnInit {
       password: this.password,
       confirm_password: this.confirm_password,
       isActive: this.builder.control(false),
-      assigned_tasks:this.builder.control([])
+      assigned_tasks:this.builder.control([]),
+      role:this.builder.control('user')
     });
   }
 }
