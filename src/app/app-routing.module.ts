@@ -18,7 +18,7 @@ const routes: Routes = [
     path:'task',component:AssignTasksComponent,canActivate:[authGaurdGuard]
   },
   {
-    path:'viewtask',component:ViewTaskComponent,canActivate:[viewTaskGuard]
+    path:'viewtask',component:ViewTaskComponent,//canActivate:[viewTaskGuard]
   }
 ];
 

@@ -5,11 +5,11 @@
       "email": "chicken959730@gmail.com",
       "password": "Basket9486!",
       "confirm_password": "Basket9486!",
-      "isActive": false,
+      "isActive": true,
       "assigned_tasks": [
         {
           "duedate": "2023-07-21",
-          "task": "",
+          "task": "Have a Look on your Enemy",
           "date": "7/20/2023",
           "status": "Completed",
           "id": 1
